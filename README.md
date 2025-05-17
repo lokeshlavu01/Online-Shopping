@@ -14,6 +14,7 @@ This project is a microservices-based online shopping application developed usin
 - **Spring Cloud Config Server** (Centralized Configuration)
 - **Spring Cloud Gateway** (API Gateway)
 - **Apache Kafka** (Event Streaming)
+- **MySQL** (Relational Database)
 - **Maven** (Build Tool)
 - **RESTful APIs**
 
@@ -40,6 +41,7 @@ online-shopping/
 - **Maven** installed
 - **Git** installed
 - **Apache Kafka** installed and running
+- **MySQL** installed and running
 
 ### Clone the Repository
 
@@ -120,6 +122,28 @@ This project uses **Apache Kafka** for asynchronous, event-driven communication 
 - Enables **real-time communication** between microservices.
 - Facilitates **event sourcing** and auditing.
 - Improves **scalability** and fault tolerance.
+
+## 🗄️ Database
+
+This project uses **MySQL** as the primary relational database for storing customer data, order details, and item information.
+
+### Configuration
+
+Each microservice is configured with its own datasource and schema. Make sure you have MySQL installed and create the required databases before running the services.
+
+- Update the `application.properties` or `application.yml` files in each service with your MySQL credentials.
+- Example configuration:
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/<database_name>
+spring.datasource.username=root
+spring.datasource.password=yourpassword
+spring.jpa.hibernate.ddl-auto=update
+```
+
+### Note
+
+Ensure the MySQL server is running and accessible before starting the microservices. Each service may have its own schema and table structure.
 
 ## 🔐 Security Configuration
 
