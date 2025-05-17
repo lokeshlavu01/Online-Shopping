@@ -7,7 +7,7 @@ This project is a microservices-based online shopping application developed usin
 
 ## 🧰 Technologies Used
 
-- **Java 17**
+- **Java 11**
 - **Spring Boot**
 - **Spring Cloud** (Eureka, Config Server, Gateway)
 - **Netflix Eureka** (Service Discovery)
