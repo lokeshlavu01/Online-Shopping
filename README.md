@@ -36,7 +36,7 @@ online-shopping/
 
 ### Prerequisites
 
-- **Java 17** installed
+- **Java 11** installed
 - **Maven** installed
 - **Git** installed
 - **Apache Kafka** installed and running
